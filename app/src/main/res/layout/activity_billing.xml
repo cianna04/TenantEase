@@ -1,0 +1,260 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="56dp"> <!-- Add margin to prevent overlap with Bottom Navigation -->
+
+        <!-- Main LinearLayout containing all the content -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Icon at the top -->
+
+            <!-- Title -->
+
+            <ImageView
+                android:id="@+id/ivTopIcon"
+                android:layout_width="91dp"
+                android:layout_height="87dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"
+                android:contentDescription="Top Icon"
+                android:src="@drawable/tag_bills" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Billings and Payment Tracking"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- Billing Reminder Title -->
+            <TextView
+                android:id="@+id/tvBillingReminder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Billing Reminder"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- Scrollable container for billing reminders -->
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1">
+
+                <!-- Container for all reminders -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="16dp">
+
+                    <!-- Reminder 1 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical">
+
+                        <!-- Notification Bell Icon -->
+                        <ImageView
+                            android:id="@+id/ivBellIcon1"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_bell"
+                            android:contentDescription="Notification Bell" />
+
+                        <!-- Reminder 1 Details Text -->
+                        <TextView
+                            android:id="@+id/tvReminderDetails1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="1"
+                            android:text="This is a reminder that your rent payment of 8500 is due on 01/15/25. Please ensure payment is made on time to avoid late fees."
+                            android:textColor="@color/colorg1"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <!-- Reminder 2 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical">
+
+                        <!-- Notification Bell Icon -->
+                        <ImageView
+                            android:id="@+id/ivBellIcon2"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_bell"
+                            android:contentDescription="Notification Bell" />
+
+                        <!-- Reminder 2 Details Text -->
+                        <TextView
+                            android:id="@+id/tvReminderDetails2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="1"
+                            android:text="This is a reminder that your rent payment of 9000 is due on 02/01/25. Please ensure payment is made on time to avoid late fees."
+                            android:textColor="@color/colorg1"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <!-- Reminder 3 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical">
+
+                        <!-- Notification Bell Icon -->
+                        <ImageView
+                            android:id="@+id/ivBellIcon3"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_bell"
+                            android:contentDescription="Notification Bell" />
+
+                        <!-- Reminder 3 Details Text -->
+                        <TextView
+                            android:id="@+id/tvReminderDetails3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="1"
+                            android:text="This is a reminder that your rent payment of 9500 is due on 03/01/25. Please ensure payment is made on time to avoid late fees."
+                            android:textColor="@color/colorg1"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <!-- Add more reminders as needed -->
+                </LinearLayout>
+            </ScrollView>
+
+            <!-- Payment Portal Section -->
+            <TextView
+                android:id="@+id/tvPaymentPortal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Payment Portal"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- QR Codes -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:gravity="center">
+
+                <!-- QR Code for Maya -->
+                <ImageView
+                    android:id="@+id/ivMayaQR"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/maya_qr" />
+
+                <!-- QR Code for BDO -->
+                <ImageView
+                    android:id="@+id/ivBDOQR"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/bank_qr" />
+
+                <!-- QR Code for GCash -->
+                <ImageView
+                    android:id="@+id/ivGcashQR"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/gcash_qr" />
+            </LinearLayout>
+
+            <!-- Proof of Payment Section -->
+            <TextView
+                android:id="@+id/tvProofOfPayment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Proof of Payment"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/border_dashed">
+
+                <!-- ImageView to display the selected proof of payment image -->
+                <ImageView
+                    android:id="@+id/ivProofOfPaymentImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:scaleType="centerCrop" />
+
+                <!-- Hint text for dragging or selecting an image -->
+                <TextView
+                    android:id="@+id/tvDragDropHint"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Drag a file here or click to select one"
+                    android:textColor="@color/colorg2"
+                    android:textSize="14sp" />
+            </FrameLayout>
+
+            <!-- Submit Button -->
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/colorb3"
+                android:text="Submit Proof of Payment"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colornav"
+        app:itemIconSize="40dp"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TenantEase</string>
+    <string-array name="roles">
+        <item>Select Role</item>
+        <item>Tenant</item>
+        <item>Landlord</item>
+        <item>Property Manager</item>
+    </string-array>
+
+</resources>
